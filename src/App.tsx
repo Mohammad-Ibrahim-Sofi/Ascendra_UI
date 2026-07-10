@@ -11,6 +11,7 @@ import Applications from '@/pages/Applications';
 import SkillGap from '@/pages/SkillGap';
 import Roadmap from '@/pages/Roadmap';
 import Mentor from '@/pages/Mentor';
+import Notifications from '@/pages/Notifications';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/skill-gap" element={<SkillGap />} />
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/mentor" element={<Mentor />} />
+        <Route path="/notifications" element={<Notifications />} />
       </Route>
     </Routes>
   );

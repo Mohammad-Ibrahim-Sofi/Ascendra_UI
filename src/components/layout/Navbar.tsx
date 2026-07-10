@@ -85,7 +85,7 @@ export function Navbar({ onMenuClick }: NavbarProps) {
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium text-foreground">{n.title}</p>
                           <p className="text-xs text-muted-foreground truncate">{n.description}</p>
-                          <p className="text-xs text-muted-foreground mt-0.5">{n.time}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">{new Date(n.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</p>
                         </div>
                       </div>
                     ))}

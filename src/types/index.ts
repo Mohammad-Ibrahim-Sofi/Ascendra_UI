@@ -78,12 +78,19 @@ export type ChatMessage = {
   timestamp: string;
 };
 
+export type NotificationType =
+  | 'opportunity'
+  | 'deadline'
+  | 'resume'
+  | 'ai'
+  | 'announcement';
+
 export type Notification = {
   id: string;
   title: string;
   description: string;
-  time: string;
-  type: 'opportunity' | 'deadline' | 'achievement' | 'mentor';
+  timestamp: string;
+  type: NotificationType;
   read: boolean;
 };
 

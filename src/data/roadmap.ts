@@ -1,0 +1,87 @@
+import type { RoadmapMilestone } from '@/types';
+
+export const roadmap: RoadmapMilestone[] = [
+  {
+    id: 'm1',
+    semester: 'Semester 1',
+    title: 'Foundations & Core Programming',
+    description: 'Build strong fundamentals in programming and computer science basics.',
+    status: 'completed',
+    date: 'Aug 2024 — Dec 2024',
+    tasks: [
+      { id: 't1', label: 'Complete C/C++ fundamentals', done: true },
+      { id: 't2', label: 'Learn Data Structures basics', done: true },
+      { id: 't3', label: 'Join coding club', done: true },
+      { id: 't4', label: 'Build first CLI project', done: true },
+    ],
+  },
+  {
+    id: 'm2',
+    semester: 'Semester 2',
+    title: 'DSA & Web Development Intro',
+    description: 'Deepen algorithmic thinking and start exploring web technologies.',
+    status: 'completed',
+    date: 'Jan 2025 — May 2025',
+    tasks: [
+      { id: 't5', label: 'Solve 150 DSA problems', done: true },
+      { id: 't6', label: 'Learn HTML, CSS, JavaScript', done: true },
+      { id: 't7', label: 'Build portfolio website', done: true },
+      { id: 't8', label: 'Participate in first hackathon', done: true },
+    ],
+  },
+  {
+    id: 'm3',
+    semester: 'Semester 3',
+    title: 'Frameworks & Open Source',
+    description: 'Master modern frameworks and contribute to the open-source community.',
+    status: 'in-progress',
+    date: 'Aug 2025 — Dec 2025',
+    tasks: [
+      { id: 't9', label: 'Master React & TypeScript', done: true },
+      { id: 't10', label: 'Build 2 full-stack projects', done: true },
+      { id: 't11', label: 'Make first open-source contribution', done: false },
+      { id: 't12', label: 'Start DSA competitive programming', done: false },
+    ],
+  },
+  {
+    id: 'm4',
+    semester: 'Semester 4',
+    title: 'System Design & Internship Prep',
+    description: 'Prepare for technical interviews and land your first internship.',
+    status: 'upcoming',
+    date: 'Jan 2026 — May 2026',
+    tasks: [
+      { id: 't13', label: 'Study System Design fundamentals', done: false },
+      { id: 't14', label: 'Complete mock interviews (20+)', done: false },
+      { id: 't15', label: 'Apply to 30+ internships', done: false },
+      { id: 't16', label: 'Build a capstone project', done: false },
+    ],
+  },
+  {
+    id: 'm5',
+    semester: 'Semester 5',
+    title: 'Specialization & Placement Prep',
+    description: 'Deepen expertise in a chosen domain and prepare for final placements.',
+    status: 'upcoming',
+    date: 'Aug 2026 — Dec 2026',
+    tasks: [
+      { id: 't17', label: 'Choose specialization track', done: false },
+      { id: 't18', label: 'Complete advanced project in domain', done: false },
+      { id: 't19', label: 'Attend networking events', done: false },
+      { id: 't20', label: 'Optimize resume & LinkedIn', done: false },
+    ],
+  },
+  {
+    id: 'm6',
+    semester: 'Semester 6',
+    title: 'Final Placements & Career Launch',
+    description: 'Secure your dream offer and transition into your professional career.',
+    status: 'upcoming',
+    date: 'Jan 2027 — May 2027',
+    tasks: [
+      { id: 't21', label: 'Participate in campus placements', done: false },
+      { id: 't22', label: 'Negotiate and accept offer', done: false },
+      { id: 't23', label: 'Complete transition plan', done: false },
+    ],
+  },
+];

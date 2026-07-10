@@ -94,3 +94,30 @@ export type SkillGap = {
   category: string;
   recommendation: string;
 };
+
+export type ApplicationStatus =
+  | 'saved'
+  | 'applied'
+  | 'under-review'
+  | 'interview'
+  | 'selected'
+  | 'rejected';
+
+export type ApplicationTimelineEvent = {
+  id: string;
+  label: string;
+  date: string;
+  done: boolean;
+};
+
+export type Application = {
+  id: string;
+  company: string;
+  role: string;
+  logo: string;
+  status: ApplicationStatus;
+  appliedDate: string;
+  deadline: string;
+  matchPercent: number;
+  timeline: ApplicationTimelineEvent[];
+};

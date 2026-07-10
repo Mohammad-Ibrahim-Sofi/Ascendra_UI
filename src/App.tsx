@@ -7,6 +7,7 @@ import Dashboard from '@/pages/Dashboard';
 import Profile from '@/pages/Profile';
 import Resume from '@/pages/Resume';
 import Opportunities from '@/pages/Opportunities';
+import Applications from '@/pages/Applications';
 import SkillGap from '@/pages/SkillGap';
 import Roadmap from '@/pages/Roadmap';
 import Mentor from '@/pages/Mentor';
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/opportunities" element={<Opportunities />} />
+        <Route path="/applications" element={<Applications />} />
         <Route path="/skill-gap" element={<SkillGap />} />
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/mentor" element={<Mentor />} />

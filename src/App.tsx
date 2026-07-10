@@ -12,6 +12,7 @@ import SkillGap from '@/pages/SkillGap';
 import Roadmap from '@/pages/Roadmap';
 import Mentor from '@/pages/Mentor';
 import Notifications from '@/pages/Notifications';
+import PlacementDashboard from '@/pages/PlacementDashboard';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <Route path="/register" element={<Register />} />
       <Route element={<DashboardLayout />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/placement-dashboard" element={<PlacementDashboard />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/opportunities" element={<Opportunities />} />

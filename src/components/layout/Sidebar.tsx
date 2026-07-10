@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard,
+  Building2,
   User,
   FileText,
   Briefcase,
@@ -18,6 +19,7 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/placement-dashboard', label: 'Placement', icon: Building2 },
   { to: '/profile', label: 'Profile', icon: User },
   { to: '/resume', label: 'Resume', icon: FileText },
   { to: '/opportunities', label: 'Opportunities', icon: Briefcase },

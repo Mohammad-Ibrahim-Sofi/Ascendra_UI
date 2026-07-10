@@ -2,14 +2,11 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard,
-  User,
-  FileText,
+  Users,
   Briefcase,
-  ClipboardList,
+  BarChart3,
+  FileBarChart,
   Bell,
-  Target,
-  Map,
-  Bot,
   X,
   LogOut,
 } from 'lucide-react';
@@ -17,23 +14,20 @@ import { Logo } from '@/components/shared/Logo';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/profile', label: 'Profile', icon: User },
-  { to: '/resume', label: 'Resume', icon: FileText },
-  { to: '/opportunities', label: 'Opportunities', icon: Briefcase },
-  { to: '/applications', label: 'Applications', icon: ClipboardList },
-  { to: '/notifications', label: 'Notifications', icon: Bell },
-  { to: '/skill-gap', label: 'Skill Gap', icon: Target },
-  { to: '/roadmap', label: 'Roadmap', icon: Map },
-  { to: '/mentor', label: 'AI Mentor', icon: Bot },
+  { to: '/officer/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/officer/students', label: 'Students', icon: Users },
+  { to: '/officer/opportunities', label: 'Opportunities', icon: Briefcase },
+  { to: '/officer/analytics', label: 'Analytics', icon: BarChart3 },
+  { to: '/officer/reports', label: 'Reports', icon: FileBarChart },
+  { to: '/officer/notifications', label: 'Notifications', icon: Bell },
 ];
 
-interface SidebarProps {
+interface OfficerSidebarProps {
   open: boolean;
   onClose: () => void;
 }
 
-export function Sidebar({ open, onClose }: SidebarProps) {
+export function OfficerSidebar({ open, onClose }: OfficerSidebarProps) {
   const location = useLocation();
 
   return (
@@ -68,7 +62,19 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           </button>
         </div>
 
-        <nav className="flex-1 space-y-1 px-3 py-4">
+        <div className="px-3 pb-2">
+          <div className="flex items-center gap-2 rounded-lg bg-secondary/10 px-3 py-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-md bg-secondary/20 text-secondary">
+              <Briefcase className="h-4 w-4" />
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-foreground">Placement Officer</p>
+              <p className="text-[10px] text-muted-foreground">Admin Console</p>
+            </div>
+          </div>
+        </div>
+
+        <nav className="flex-1 space-y-1 px-3 py-2">
           {navItems.map((item) => {
             const isActive = location.pathname === item.to;
             return (
@@ -85,7 +91,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               >
                 {isActive && (
                   <motion.div
-                    layoutId="sidebar-active"
+                    layoutId="officer-sidebar-active"
                     className="absolute left-0 top-1/2 h-5 w-0.5 -translate-y-1/2 rounded-full bg-primary"
                     transition={{ type: 'spring', stiffness: 350, damping: 30 }}
                   />
